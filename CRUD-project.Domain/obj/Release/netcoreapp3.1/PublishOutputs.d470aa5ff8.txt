@@ -1,0 +1,4 @@
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\bin\Release\netcoreapp3.1\publish\CRUD-project.Domain.dll
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\bin\Release\netcoreapp3.1\publish\CRUD-project.Domain.deps.json
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\bin\Release\netcoreapp3.1\publish\CRUD-project.Domain.pdb
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\bin\Release\netcoreapp3.1\publish\FluentValidation.dll

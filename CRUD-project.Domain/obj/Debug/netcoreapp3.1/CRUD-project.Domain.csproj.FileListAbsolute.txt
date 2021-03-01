@@ -1,0 +1,9 @@
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\bin\Debug\netcoreapp3.1\CRUD-project.Domain.deps.json
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\bin\Debug\netcoreapp3.1\CRUD-project.Domain.dll
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\bin\Debug\netcoreapp3.1\CRUD-project.Domain.pdb
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\obj\Debug\netcoreapp3.1\CRUD-project.Domain.csprojAssemblyReference.cache
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\obj\Debug\netcoreapp3.1\CRUD-project.Domain.AssemblyInfoInputs.cache
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\obj\Debug\netcoreapp3.1\CRUD-project.Domain.AssemblyInfo.cs
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\obj\Debug\netcoreapp3.1\CRUD-project.Domain.csproj.CoreCompileInputs.cache
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\obj\Debug\netcoreapp3.1\CRUD-project.Domain.dll
+C:\Users\alyson.pegini\source\Repos\CRUD-project\CRUD-project.Domain\obj\Debug\netcoreapp3.1\CRUD-project.Domain.pdb

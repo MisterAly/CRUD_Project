@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fBcYMBwMk4vZk28tATbXuRdC/V/faxyKj8sDdPrRaxPt9m4IzPtvyKzAN8dbTDJRjWDWpTM1qYOkJPDKlXVpBw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alyson.pegini\\Desktop\\CRUD-project\\CRUD-project.Domain\\CRUD-project.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alyson.pegini\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
+    "C:\\Users\\alyson.pegini\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
