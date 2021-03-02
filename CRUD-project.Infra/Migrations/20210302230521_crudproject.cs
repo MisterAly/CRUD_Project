@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CRUD_project.Infra.Migrations
 {
-    public partial class dbCreation : Migration
+    public partial class crudproject : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
+
 namespace CRUD_project.Infra.Context
 {
     public class MainContext : DbContext
@@ -19,11 +20,13 @@ namespace CRUD_project.Infra.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            
             if (!optionsBuilder.IsConfigured)
             {
+                var sqlitePath = System.IO.Path.Combine(
+                System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), @"C:\Users\alyson.pegini\Desktop\CRUD-project\CRUD-project.Web\DevsdbSqlite");
                 optionsBuilder
-                    .UseLazyLoadingProxies()
-                    .UseSqlServer("Data Source=NT-04809;Initial Catalog=Desenvolvedores;Integrated Security=True;MultipleActiveResultSets=True");
+                    .UseSqlite($"Data Source={sqlitePath}");
             }
         }
     }

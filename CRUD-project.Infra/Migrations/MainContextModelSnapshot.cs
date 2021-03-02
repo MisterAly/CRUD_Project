@@ -3,7 +3,6 @@ using System;
 using CRUD_project.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRUD_project.Infra.Migrations
@@ -15,36 +14,34 @@ namespace CRUD_project.Infra.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "3.1.8");
 
             modelBuilder.Entity("CRUD_project.Domain.Entities.Desenvolvedores", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
+                        .HasColumnType("TEXT")
                         .HasDefaultValueSql("newid()");
 
                     b.Property<DateTime>("Datanascimento")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Hobby")
                         .IsRequired()
-                        .HasColumnType("nvarchar(1000)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(1000);
 
                     b.Property<int>("Idade")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(500)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(500);
 
                     b.Property<string>("Sexo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(30);
 
                     b.HasKey("Id");

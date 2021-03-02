@@ -17,7 +17,7 @@ namespace CRUD_project.Web.Controllers
             _service = service;
         }
 
-        [HttpGet("desenvolvedores/{name}/{age:int}")]
+        [HttpGet("desenvolvedores")]
         public async Task<ActionResult<IEnumerable<Desenvolvedores>>> GetNameAge(string name, int age)
         {
             var dados = await _service.ObterPorDadosAsync(name, age);

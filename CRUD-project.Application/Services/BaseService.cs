@@ -44,12 +44,12 @@ namespace CRUD_project.Application.Services
             {
                 var filter = await _repository.GetByIdAsync(tEntity.Id);
                 if(filter != null)
-                { 
+                {
                     var valid = await _repository.UpdateAsync(tEntity);
-                    return new Result<TEntity>(!valid, valid ? "Alteração feita com sucesso." : "Alteração inválida. ");
+                    return new Result<TEntity>(!valid, "Alteração feita com sucesso.");
                 }
             }
-            return new Result<TEntity>(true, tEntity.ToString());
+            return new Result<TEntity>(true, "Alteração inválida. ");
         }
 
         public async Task<Result<TEntity>> PostarAsync(TEntity tEntity)

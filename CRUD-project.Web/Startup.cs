@@ -21,8 +21,9 @@ namespace CRUD_project.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MainContext>(opt => opt
-                .UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<MainContext>(opt => opt.UseSqlite(
+                Configuration.GetConnectionString("DefaultConnection")
+                ));
             services.AddControllers().AddNewtonsoftJson();
             services.AddCors();
             services.InjetarDependencias();

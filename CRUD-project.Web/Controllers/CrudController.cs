@@ -52,7 +52,7 @@ namespace CRUD_project.Web.Controllers
                 return Ok(result);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("edit")]
         public async Task<ActionResult<TEntity>> Put(TEntity tEntity)
         {
             var result = await _service.AlterarAsync(tEntity);
@@ -66,7 +66,7 @@ namespace CRUD_project.Web.Controllers
         public async Task<ActionResult<TEntity>> Delete(Guid id)
         {
             var result = await _service.DeletarAsync(id);
-            if (result.Error)
+            if (result == null)
                 return BadRequest(result);
             else
                 return Ok(result);

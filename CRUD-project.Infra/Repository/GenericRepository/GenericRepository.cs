@@ -28,14 +28,19 @@ namespace CRUD_project.Infra.Repository.GenericRepository
 
         public async Task<TEntity> GetByIdAsync(Guid id)
         {
-            return await DbSet.FindAsync(id);
+            var entity = await DbSet.FindAsync(id);
+            if (entity != null)
+            {
+                _dbContext.Entry(entity).State = EntityState.Detached;
+            }
+            return entity;
         }
 
         public async Task<bool> CreateAsync(TEntity entity)
         {
             try
             {
-                DbSet.Add(entity);
+                await _dbContext.Set<TEntity>().AddAsync(entity);
                 await _dbContext.SaveChangesAsync();
                 return true;
             }
@@ -61,14 +66,13 @@ namespace CRUD_project.Infra.Repository.GenericRepository
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            var entity = await Query().FirstOrDefaultAsync(q => q.Id == id);
-            if(entity != null)
+            try
             {
-                DbSet.Remove(entity);
+                DbSet.Remove(await DbSet.FindAsync(id));
                 await _dbContext.SaveChangesAsync();
                 return true;
             }
-            else
+            catch
             {
                 return false;
             }
