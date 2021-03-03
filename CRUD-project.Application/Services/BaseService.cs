@@ -46,10 +46,10 @@ namespace CRUD_project.Application.Services
                 if(filter != null)
                 {
                     var valid = await _repository.UpdateAsync(tEntity);
-                    return new Result<TEntity>(!valid, "Alteração feita com sucesso.");
+                    return new Result<TEntity>(valid, "Alteração feita com sucesso.");
                 }
             }
-            return new Result<TEntity>(true, "Alteração inválida. ");
+            return new Result<TEntity>(false, "Alteração inválida. ");
         }
 
         public async Task<Result<TEntity>> PostarAsync(TEntity tEntity)
@@ -60,10 +60,10 @@ namespace CRUD_project.Application.Services
                 if(filter == null)
                 {
                     var valid = await _repository.CreateAsync(tEntity);
-                    return new Result<TEntity>(!valid, "Criado com sucesso." );
+                    return new Result<TEntity>(valid, "Criado com sucesso." );
                 }
             }
-                return new Result<TEntity>(true, "Criação inválida.");
+                return new Result<TEntity>(false, "Criação inválida.");
         }
 
         public async Task<Result<TEntity>> DeletarAsync(Guid id)

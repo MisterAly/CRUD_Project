@@ -35,8 +35,8 @@ namespace CRUD_project.Tests.Unit.Services
 
         public static IEnumerable<object[]> InLineDataTesteUpdate => new List<object[]>
         {
-                new object[] { GetDevs(), true, "Alteração feita com sucesso."},
-                new object[] { GetDevs(), false, "Alteração inválida. " }
+                new object[] { GetDevs(), true, "Alteração feita com sucesso.", GetDevs() },
+                new object[] { GetDevs(), false, "Alteração inválida. ", null }
         };
 
         public static IEnumerable<object[]> InLineDataTestePostar => new List<object[]>
@@ -63,7 +63,7 @@ namespace CRUD_project.Tests.Unit.Services
             var devFake = Task.FromResult(list);
             _desenvolvedoresRepository.GetAllAsync().Returns(devFake);
             var result = _desenvolvedoresService.ObterTodosAsync().Result;
-            result.Error.Should().Be(retorno);
+            result.IsValid.Should().Be(retorno);
             result.Message.ToString().Should().Be(mensagem);
         }
 
@@ -73,7 +73,7 @@ namespace CRUD_project.Tests.Unit.Services
         {
             _desenvolvedoresRepository.GetByIdAsync(id).Returns(Task.FromResult(desenvolvedores));
             var result = _desenvolvedoresService.ObterPorIdAsync(id).Result;
-            result.Error.Should().Be(retorno);
+            result.IsValid.Should().Be(retorno);
             result.Message.ToString().Should().Be(mensagem);
         }
 
@@ -84,16 +84,16 @@ namespace CRUD_project.Tests.Unit.Services
             _desenvolvedoresRepository.CreateAsync(desenvolvedores).Returns(retorno);
             _desenvolvedoresRepository.GetByIdAsync(Guid.Empty).Returns(dbRetorno);
             var result = _desenvolvedoresService.PostarAsync(desenvolvedores).Result;
-            result.Error.Should().Be(!retorno);
+            result.IsValid.Should().Be(retorno);
             result.Message.ToString().Should().Be(mensagem);
         }
 
         [Theory]
         [MemberData(nameof(InLineDataTesteUpdate))]
-        public void Deve_Alterar_Corretamente(Desenvolvedores desenvolvedores, bool retorno, string mensagem)
+        public void Deve_Alterar_Corretamente(Desenvolvedores desenvolvedores, bool retorno, string mensagem, Desenvolvedores getReturn)
         {
             desenvolvedores.Id = Guid.NewGuid();
-            _desenvolvedoresRepository.GetByIdAsync(desenvolvedores.Id).Returns(Task.FromResult(desenvolvedores));
+            _desenvolvedoresRepository.GetByIdAsync(desenvolvedores.Id).Returns(Task.FromResult(getReturn));
             _desenvolvedoresRepository.UpdateAsync(desenvolvedores).Returns(Task.FromResult(retorno));
             var result = _desenvolvedoresService.AlterarAsync(desenvolvedores).Result;
             result.Message.ToString().Should().Be(mensagem);

@@ -26,7 +26,7 @@ namespace CRUD_project.Web.Controllers
         public async Task<ActionResult<IEnumerable<TEntity>>> GetById(Guid id)
         {
             var result = await _service.ObterPorIdAsync(id);
-            if (result.Error)
+            if (!result.IsValid)
                 return BadRequest(result);
             else
                 return Ok(result);
@@ -36,7 +36,7 @@ namespace CRUD_project.Web.Controllers
         public async Task<ActionResult<TEntity>> Get()
         {
             var result = await _service.ObterTodosAsync();
-            if (result.Error)
+            if (!result.IsValid)
                 return BadRequest(result);
             else
                 return Ok(result);
@@ -46,7 +46,7 @@ namespace CRUD_project.Web.Controllers
         public async Task<ActionResult<TEntity>> Post(TEntity tEntity)
         {
             var result = await _service.PostarAsync(tEntity);
-            if (result.Error)
+            if (!result.IsValid)
                 return BadRequest(result);
             else
                 return Ok(result);
@@ -56,7 +56,7 @@ namespace CRUD_project.Web.Controllers
         public async Task<ActionResult<TEntity>> Put(TEntity tEntity)
         {
             var result = await _service.AlterarAsync(tEntity);
-            if (result.Error)
+            if (!result.IsValid)
                 return BadRequest(result);
             else
                 return Ok(result);
