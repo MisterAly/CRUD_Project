@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "red4t/Gi1A5YoxHprXRwVgV3NWSfk8gW2iehcwCd2vzRYPIK/Q5xOzBxDTFrNnnl4YuhWhmxJwsIdUB050zuUQ==",
+  "dgSpecHash": "7ylArFZvVvrZ7zu4RO0ATCSSPbnBg2e5KR9Cu9CtQfTru8M/QgwfxxW9lKeHe9IvHd6iAJdekBA/XaomN515Pw==",
   "success": true,
   "projectFilePath": "C:\\Users\\alyson.pegini\\Desktop\\CRUD-project\\CRUD-project.Web\\CRUD-project.Web.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,7 @@
     "C:\\Users\\alyson.pegini\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\alyson.pegini\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\alyson.pegini\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\alyson.pegini\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512",
     "C:\\Users\\alyson.pegini\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\alyson.pegini\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\alyson.pegini\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",

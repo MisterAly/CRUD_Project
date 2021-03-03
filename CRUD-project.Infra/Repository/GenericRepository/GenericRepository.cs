@@ -44,7 +44,7 @@ namespace CRUD_project.Infra.Repository.GenericRepository
                 await _dbContext.SaveChangesAsync();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
                 return false;
             }

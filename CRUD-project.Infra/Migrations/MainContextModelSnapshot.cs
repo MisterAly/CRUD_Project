@@ -20,8 +20,7 @@ namespace CRUD_project.Infra.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasDefaultValueSql("newid()");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Datanascimento")
                         .HasColumnType("TEXT");

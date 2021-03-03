@@ -24,7 +24,7 @@ namespace CRUD_project.Infra.Context
             if (!optionsBuilder.IsConfigured)
             {
                 var sqlitePath = System.IO.Path.Combine(
-                System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), @"C:\Users\alyson.pegini\Desktop\CRUD-project\CRUD-project.Web\DevsdbSqlite");
+                System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), @"CRUD-project\CRUD-project.Web\DevsdbSqlite");
                 optionsBuilder
                     .UseSqlite($"Data Source={sqlitePath}");
             }

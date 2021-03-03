@@ -12,7 +12,7 @@ namespace CRUD_project.Infra.Context.Types
         public void Configure(EntityTypeBuilder<Desenvolvedores> builder)
         {
             builder.HasKey(q => q.Id);
-            builder.Property(q => q.Id).HasDefaultValueSql("newid()");
+            builder.Property(q => q.Id).ValueGeneratedOnAdd();
             builder.Property(q => q.Nome).IsRequired().HasMaxLength(500);
             builder.Property(q => q.Idade).IsRequired();
             builder.Property(q => q.Hobby).IsRequired().HasMaxLength(1000);
