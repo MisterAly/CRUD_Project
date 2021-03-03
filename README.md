@@ -40,3 +40,4 @@
 <dd>Para rodar a aplicação pressione F5</dd>
 <dd>Os scripts para o banco estão pontos na pasta Migrations no projeto Infra</dd>
 <dd>A API vem com a aplicação do Swagger, ao executar deve abrir automaticamente, apenas selecione Desenvolvedores</dd>
+<dd>Aplicação roda em docker via Dockerfile</dd>
